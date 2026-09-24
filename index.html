@@ -20,18 +20,61 @@
   <img src="https://raw.githubusercontent.com/havaianasdestruido/.github/refs/heads/main/cat.jpg">
   <script language="JavaScript"> 
 var space = " ";
-var speed = "60";
+var speed = 60;
 var pos = 0;
-var msg = "QUACK!! oops, i mean: meow! w-well, actually :nerd: it would be MEACK since my pfp if a cat but my name is PatoFlamejanteTV, so its.. both?!";
-// var msg = "UltimateQuack, now on the Internet!!";
-// var msg = "hi hi hi hi hi hi hi hi hi hi hi hih ih ih ihi hih ih ... ... ... does anyone really reads this?";
+
+var messages = [
+    "QUACK!! oops, i mean: meow! w-well, actually :nerd: it would be MEACK since my pfp is a cat but my name is PatoFlamejanteTV, so its.. both?!",
+    "UltimateQuack, now on the Internet!!",
+    "hi hi hi hi hi hi hi hi hi hi hi hi hi hi hih ih ih ihi hih ih ... ... ... does anyone really read this?",
+    "QUACK QUACK QUACK!!",
+    "asdfghjkl",
+    "meow :3",
+    "Certified Duck Moment™",
+    "fun fact: this website is open-source!"
+];
+
+// Shuffle messages
+function shuffle(array)
+{
+    for (var i = array.length - 1; i > 0; i--)
+    {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
+
+var queue = messages.slice();
+shuffle(queue);
+
+var msg = queue.shift();
+
 function Scroll()
 {
-document.title = msg.substring(pos, msg.length) + space + msg.substring(0,pos);
-pos++;
-if (pos > msg.length) pos = 0;
-window.setTimeout("Scroll()", speed);
+    document.title = msg.substring(pos, msg.length) + space + msg.substring(0, pos);
+
+    pos++;
+
+    if (pos > msg.length)
+    {
+        pos = 0;
+
+        // Get the next message
+        if (queue.length === 0)
+        {
+            // All messages were shown — create a new random order
+            queue = messages.slice();
+            shuffle(queue);
+        }
+
+        msg = queue.shift();
+    }
+
+    window.setTimeout(Scroll, speed);
 }
+
 Scroll();
 </script>
 </body>
