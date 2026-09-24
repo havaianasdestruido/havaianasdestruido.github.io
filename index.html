@@ -18,5 +18,21 @@
 </head>
 <body>
   <img src="https://raw.githubusercontent.com/havaianasdestruido/.github/refs/heads/main/cat.jpg">
+  <script language="JavaScript"> 
+var space = " ";
+var speed = "60";
+var pos = 0;
+var msg = "QUACK!! oops, i mean: meow! w-well, actually :nerd: it would be MEACK since my pfp if a cat but my name is PatoFlamejanteTV, so its.. both?!";
+// var msg = "UltimateQuack, now on the Internet!!";
+// var msg = "hi hi hi hi hi hi hi hi hi hi hi hih ih ih ihi hih ih ... ... ... does anyone really reads this?";
+function Scroll()
+{
+document.title = msg.substring(pos, msg.length) + space + msg.substring(0,pos);
+pos++;
+if (pos > msg.length) pos = 0;
+window.setTimeout("Scroll()", speed);
+}
+Scroll();
+</script>
 </body>
 </html>
