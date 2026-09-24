@@ -77,5 +77,98 @@ function Scroll()
 
 Scroll();
 </script>
+  <script>
+    (() => {
+    const konamiCode = [
+        "ArrowUp",
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight",
+        "ArrowLeft",
+        "ArrowRight",
+        "b",
+        "a"
+    ];
+
+    let input = [];
+
+    window.addEventListener("keydown", (event) => {
+        const key = event.key.length === 1
+            ? event.key.toLowerCase()
+            : event.key;
+
+        // Add the key to the sequence
+        input.push(key);
+
+        // Only keep the last 10 keys
+        if (input.length > konamiCode.length) {
+            input.shift();
+        }
+
+        // Konami code entered
+        if (input.length === konamiCode.length &&
+            input.every((key, i) => key === konamiCode[i])) {
+
+            console.log("Konami code armed! Press Enter...");
+            window.__konamiArmed = true;
+        }
+
+        // Enter activates it
+        if (event.key === "Enter" && window.__konamiArmed) {
+            window.__konamiArmed = false;
+            activateKonami();
+        }
+    });
+
+    function activateKonami() {
+        // Try to turn the window into a popup-sized window.
+        // This only works if the browser allows window resizing.
+        const width = 600;
+        const height = 400;
+
+        try {
+            window.resizeTo(width, height);
+            window.moveTo(
+                (screen.availWidth - width) / 2,
+                (screen.availHeight - height) / 2
+            );
+        } catch (e) {
+            console.warn("Browser blocked window resizing.");
+        }
+
+        // Shake animation
+        const originalX = window.screenX;
+        const originalY = window.screenY;
+
+        let shakes = 0;
+        const maxShakes = 20;
+
+        const shake = () => {
+            if (shakes >= maxShakes) {
+                try {
+                    window.moveTo(originalX, originalY);
+                } catch {}
+                return;
+            }
+
+            const intensity = 12;
+
+            try {
+                window.moveTo(
+                    originalX + (Math.random() * intensity * 2 - intensity),
+                    originalY + (Math.random() * intensity * 2 - intensity)
+                );
+            } catch {}
+
+            shakes++;
+            setTimeout(shake, 40);
+        };
+
+        shake();
+    }
+})();
+  </script>
 </body>
 </html>
