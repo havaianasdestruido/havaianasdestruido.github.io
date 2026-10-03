@@ -1,7 +1,6 @@
 (function () {
 "use strict";
 
-```
 var activePopover = null;
 var previouslyFocused = null;
 
@@ -69,6 +68,5 @@ if (document.addEventListener) {
 } else if (document.attachEvent) {
     document.attachEvent("onkeydown", handleKeyDown);
 }
-```
 
 }());
