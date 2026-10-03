@@ -3,38 +3,17 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   Palette
-   -------------------------------------------------------------------------- */
-
-:root {
-    --dark-bg: #231f18;
-    --dark-bg-alt: #2b261e;
-    --dark-bg-light: #373126;
-
-    --dark-text: #ffffd8;
-    --dark-text-secondary: #e8cfa1;
-
-    --dark-link: #b4a07d;
-
-    --dark-border: #928265;
-    --dark-border-light: #796c54;
-
-    --dark-selection: #5b513f;
-}
-
-/* --------------------------------------------------------------------------
    Document
    -------------------------------------------------------------------------- */
 
 html {
-    background-color: var(--dark-bg);
-    color: var(--dark-text);
-    color-scheme: dark;
+    background-color: #231f18;
+    color: #ffffd8;
 }
 
 body {
-    background-color: var(--dark-bg);
-    color: var(--dark-text);
+    background-color: #231f18;
+    color: #ffffd8;
 }
 
 /* --------------------------------------------------------------------------
@@ -42,28 +21,53 @@ body {
    -------------------------------------------------------------------------- */
 
 a {
-    color: var(--dark-link);
+    color: #b4a07d;
 }
 
 table,
 fieldset {
-    border-color: var(--dark-border);
+    border-color: #928265;
 }
 
 mark {
-    background-color: var(--dark-selection);
-    color: var(--dark-text);
+    background-color: #5b513f;
+    color: #ffffd8;
 }
 
 kbd {
-    background-color: var(--dark-bg-alt);
-    color: var(--dark-text);
-    border-color: var(--dark-border);
+    background-color: #2b261e;
+    color: #ffffd8;
+    border-color: #928265;
 }
 
 code {
-    background-color: var(--dark-bg-alt);
-    color: var(--dark-text);
+    background-color: #2b261e;
+    color: #ffffd8;
+}
+
+/* The small ES5 dialog fallback uses only CSS understood by IE11. */
+.legacy-popover {
+    background-color: #2b261e;
+    border: 2px solid #928265;
+    box-sizing: border-box;
+    color: #ffffd8;
+    left: 10px;
+    margin: 0 auto;
+    max-width: calc(100% - 20px);
+    padding: 18px;
+    position: fixed;
+    right: 10px;
+    top: 20%;
+    width: 440px;
+    z-index: 1000;
+}
+
+.legacy-popover table,
+.legacy-popover td {
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
+    word-wrap: break-word;
 }
 
 /* --------------------------------------------------------------------------
@@ -71,16 +75,16 @@ code {
    -------------------------------------------------------------------------- */
 
 ::selection {
-    background-color: var(--dark-selection);
-    color: var(--dark-text);
+    background-color: #5b513f;
+    color: #ffffd8;
 }
 
 ::-moz-selection {
-    background-color: var(--dark-selection);
-    color: var(--dark-text);
+    background-color: #5b513f;
+    color: #ffffd8;
 }
 
 ::placeholder {
-    color: var(--dark-text-secondary);
+    color: #e8cfa1;
     opacity: 0.5;
 }

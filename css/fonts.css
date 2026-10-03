@@ -5,7 +5,8 @@
 
 @font-face {
     font-family: "Lucida BSOD";
-    src: url("../fonts/lucida-bsod.otf.woff2") format("woff2");
+    src: url("../fonts/lucida-bsod.otf.woff2") format("woff2"),
+         url("../fonts/lucida-bsod.otf.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;

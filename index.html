@@ -1,5 +1,6 @@
 <html lang="en"><head>
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Hi!!</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Personal page for PatoFlamejanteTV (aka UltimateQuack, havaianasdestruido): Win32, game development, native apps, and plain HTML projects.">
@@ -7,6 +8,7 @@
 <link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/theme.css">
 <script src="js/title-ticker.js" defer></script>
+<script src="js/popovers.js" defer></script>
 </head>
 <body>
     <table role="presentation" width="1248">
@@ -77,7 +79,7 @@
 <fieldset>
 <legend><strong role="heading" aria-level="2">▌ ...lol</strong></legend>
 
-<img src="img/lol.gif" alt="lol" width="310" height="38" loading="lazy">
+<img src="img/lol.gif" alt="lol" width="310" height="38">
 </fieldset>
 </td>
 
@@ -87,13 +89,13 @@
 <small>
 <table aria-label="Public repositories">
 <tbody><tr><th scope="col" align="left" width="21%">Repository</th><th scope="col" align="left" width="14%">Area</th><th scope="col" align="left" width="18%">Language</th><th scope="col" align="left" width="47%">Description</th></tr>
-<tr><td valign="top"><a href="https://github.com/havaianasdestruido/FNF-Phoenix-Engine"><code>FNF-Phoenix-Engine</code></a></td><td valign="top">Game</td><td valign="top">Haxe</td><td valign="top">My own FNF engine.</td></tr>
-<tr><td valign="top"><a href="https://github.com/havaianasdestruido/bloxNES"><code>bloxNES</code></a></td><td valign="top">Game</td><td valign="top">Luau</td><td valign="top">NES emulator inside a ROBLOX game.</td></tr>
-<tr><td valign="top"><a href="https://github.com/havaianasdestruido/RoBrowser"><code>RoBrowser</code></a></td><td valign="top">Game</td><td valign="top">Luau</td><td valign="top">HTML+CSS viewer &amp; parser inside ROBLOX</td></tr>
-<tr><td valign="top"><a href="https://github.com/havaianasdestruido/WebRadioFM"><code>WebRadioFM</code></a></td><td valign="top">Native app</td><td valign="top">C#</td><td valign="top">Windows Phone music player with Last.FM integration.</td></tr>
-<tr><td valign="top"><a href="https://github.com/havaianasdestruido/WindowsMovieMakerDecomp"><code>WindowsMovieMakerDecomp</code></a></td><td valign="top">Win32</td><td valign="top">C++</td><td valign="top">Full decompilation of Microsoft Windows Movie Maker. (2012)</td></tr>
-<tr><td valign="top"><a href="https://github.com/havaianasdestruido/PrintSpoolerAutoRun"><code>PrintSpoolerAutoRun</code></a></td><td valign="top">Win32</td><td valign="top">C++</td><td valign="top">Simple Win32 to start printer spooler service.</td></tr>
-<tr><td valign="top"><a href="https://github.com/havaianasdestruido/plainhtml-me"><code>plainhtml-me</code></a></td><td valign="top">Claude SKILL</td><td valign="top">HTML</td><td valign="top">AI skill for making websites that looks like this one</td></tr>
+<tr><td valign="top"><a href="https://github.com/havaianasdestruido/FNF-Phoenix-Engine"><code>FNF-Phoenix-Engine</code></a><br><button type="button" onclick="showPopover('p-phoenix')">Details</button></td><td valign="top">Game</td><td valign="top">Haxe</td><td valign="top">My own FNF engine.</td></tr>
+<tr><td valign="top"><a href="https://github.com/havaianasdestruido/bloxNES"><code>bloxNES</code></a><br><button type="button" onclick="showPopover('p-bloxnes')">Details</button></td><td valign="top">Game</td><td valign="top">Luau</td><td valign="top">NES emulator inside a ROBLOX game.</td></tr>
+<tr><td valign="top"><a href="https://github.com/havaianasdestruido/RoBrowser"><code>RoBrowser</code></a><br><button type="button" onclick="showPopover('p-robrowser')">Details</button></td><td valign="top">Game</td><td valign="top">Luau</td><td valign="top">HTML+CSS viewer &amp; parser inside ROBLOX</td></tr>
+<tr><td valign="top"><a href="https://github.com/havaianasdestruido/WebRadioFM"><code>WebRadioFM</code></a><br><button type="button" onclick="showPopover('p-webradio')">Details</button></td><td valign="top">Native app</td><td valign="top">C#</td><td valign="top">Windows Phone music player with Last.FM integration.</td></tr>
+<tr><td valign="top"><a href="https://github.com/havaianasdestruido/WindowsMovieMakerDecomp"><code>WindowsMovieMakerDecomp</code></a><br><button type="button" onclick="showPopover('p-movie')">Details</button></td><td valign="top">Win32</td><td valign="top">C++</td><td valign="top">Full decompilation of Microsoft Windows Movie Maker. (2012)</td></tr>
+<tr><td valign="top"><a href="https://github.com/havaianasdestruido/PrintSpoolerAutoRun"><code>PrintSpoolerAutoRun</code></a><br><button type="button" onclick="showPopover('p-spooler')">Details</button></td><td valign="top">Win32</td><td valign="top">C++</td><td valign="top">Simple Win32 to start printer spooler service.</td></tr>
+<tr><td valign="top"><a href="https://github.com/havaianasdestruido/plainhtml-me"><code>plainhtml-me</code></a><br><button type="button" onclick="showPopover('p-plainhtml')">Details</button></td><td valign="top">Claude SKILL</td><td valign="top">HTML</td><td valign="top">AI skill for making websites that looks like this one</td></tr>
 </tbody></table>
 </small>
 </fieldset>
@@ -144,7 +146,7 @@
 
 <fieldset>
 <legend>About this page</legend>
-<small>No CSS. Native HTML only, with support for screen readers. (a11y)</small>
+<small>Native HTML first. Minimal CSS, no framework clutter, with support for screen readers. (a11y)</small>
 </fieldset>
 </td>
 </tr>
@@ -152,59 +154,59 @@
 </main>
 
 <div id="popovers">
-<div id="p-phoenix" popover="" role="dialog" aria-labelledby="t-p-phoenix">
+<div id="p-phoenix" class="legacy-popover" role="dialog" aria-hidden="true" style="display: none;" aria-labelledby="t-p-phoenix">
 <table role="presentation"><tbody><tr><td width="400">
 <h3 id="t-p-phoenix">FNF-Phoenix-Engine</h3>
 <small>Enhanced fork of JSE, itself a fork of Psych, with performance-related additions.</small>
-<p><button type="button" popovertarget="p-phoenix" popovertargetaction="hide">✕ Close</button></p>
+<p><button type="button" onclick="hidePopover('p-phoenix')">✕ Close</button></p>
 </td></tr></tbody></table>
 </div>
 
-<div id="p-bloxnes" popover="" role="dialog" aria-labelledby="t-p-bloxnes">
+<div id="p-bloxnes" class="legacy-popover" role="dialog" aria-hidden="true" style="display: none;" aria-labelledby="t-p-bloxnes">
 <table role="presentation"><tbody><tr><td width="400">
 <h3 id="t-p-bloxnes">bloxNES</h3>
 <small>Public Lua repository in the Roblox ecosystem.</small>
-<p><button type="button" popovertarget="p-bloxnes" popovertargetaction="hide">✕ Close</button></p>
+<p><button type="button" onclick="hidePopover('p-bloxnes')">✕ Close</button></p>
 </td></tr></tbody></table>
 </div>
 
-<div id="p-robrowser" popover="" role="dialog" aria-labelledby="t-p-robrowser">
+<div id="p-robrowser" class="legacy-popover" role="dialog" aria-hidden="true" style="display: none;" aria-labelledby="t-p-robrowser">
 <table role="presentation"><tbody><tr><td width="400">
 <h3 id="t-p-robrowser">RoBrowser</h3>
 <small>Public Luau repository for Roblox.</small>
-<p><button type="button" popovertarget="p-robrowser" popovertargetaction="hide">✕ Close</button></p>
+<p><button type="button" onclick="hidePopover('p-robrowser')">✕ Close</button></p>
 </td></tr></tbody></table>
 </div>
 
-<div id="p-webradio" popover="" role="dialog" aria-labelledby="t-p-webradio">
+<div id="p-webradio" class="legacy-popover" role="dialog" aria-hidden="true" style="display: none;" aria-labelledby="t-p-webradio">
 <table role="presentation"><tbody><tr><td width="400">
 <h3 id="t-p-webradio">WebRadioFM</h3>
 <small>Windows Phone music player with Last.FM integration.</small>
-<p><button type="button" popovertarget="p-webradio" popovertargetaction="hide">✕ Close</button></p>
+<p><button type="button" onclick="hidePopover('p-webradio')">✕ Close</button></p>
 </td></tr></tbody></table>
 </div>
 
-<div id="p-movie" popover="" role="dialog" aria-labelledby="t-p-movie">
+<div id="p-movie" class="legacy-popover" role="dialog" aria-hidden="true" style="display: none;" aria-labelledby="t-p-movie">
 <table role="presentation"><tbody><tr><td width="400">
 <h3 id="t-p-movie">WindowsMovieMakerDecomp</h3>
 <small>Full decompilation of Microsoft Windows Movie Maker, extracted from a 2012 Live Essentials setup.</small>
-<p><button type="button" popovertarget="p-movie" popovertargetaction="hide">✕ Close</button></p>
+<p><button type="button" onclick="hidePopover('p-movie')">✕ Close</button></p>
 </td></tr></tbody></table>
 </div>
 
-<div id="p-spooler" popover="" role="dialog" aria-labelledby="t-p-spooler">
+<div id="p-spooler" class="legacy-popover" role="dialog" aria-hidden="true" style="display: none;" aria-labelledby="t-p-spooler">
 <table role="presentation"><tbody><tr><td width="400">
 <h3 id="t-p-spooler">PrintSpoolerAutoRun</h3>
 <small>Simple Win32 utility that starts the printer spooler service when it is not running.</small>
-<p><button type="button" popovertarget="p-spooler" popovertargetaction="hide">✕ Close</button></p>
+<p><button type="button" onclick="hidePopover('p-spooler')">✕ Close</button></p>
 </td></tr></tbody></table>
 </div>
 
-<div id="p-plainhtml" popover="" role="dialog" aria-labelledby="t-p-plainhtml">
+<div id="p-plainhtml" class="legacy-popover" role="dialog" aria-hidden="true" style="display: none;" aria-labelledby="t-p-plainhtml">
 <table role="presentation"><tbody><tr><td width="400">
 <h3 id="t-p-plainhtml">plainhtml-me</h3>
 <small>Repository for plainhtml skills and native HTML experimentation.</small>
-<p><button type="button" popovertarget="p-plainhtml" popovertargetaction="hide">✕ Close</button></p>
+<p><button type="button" onclick="hidePopover('p-plainhtml')">✕ Close</button></p>
 </td></tr></tbody></table>
 </div>
 </div>
