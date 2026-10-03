@@ -3,150 +3,13 @@
 <title>Hi!!</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Personal page for PatoFlamejanteTV (aka UltimateQuack, havaianasdestruido): Win32, game development, native apps, and plain HTML projects.">
-<style>
-@font-face {
-    font-family: "Lucida BSOD";
-    src: url("./lucida-bsod.otf.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-* {
-    font-family: "Lucida BSOD", Tahoma, sans-serif !important;
-    /*zoom: 1.5;*/
-}
-</style>
-<style>
-:root {
-    --dark-bg: #231f18;
-    --dark-bg-alt: #2b261e;
-    --dark-bg-light: #373126;
-
-    --dark-text: #ffffd8;
-    --dark-text-secondary: #e8cfa1;
-
-    --dark-link: #b4a07d;
-
-    --dark-border: #928265;
-    --dark-border-light: #796c54;
-
-    --dark-selection: #5b513f;
-}
-
-html {
-    background-color: var(--dark-bg);
-    color: var(--dark-text);
-    color-scheme: dark;
-}
-
-body {
-    background-color: var(--dark-bg);
-    color: var(--dark-text);
-}
-
-a {
-    color: var(--dark-link);
-}
-
-table,
-fieldset {
-    border-color: var(--dark-border);
-}
-
-mark {
-    background-color: var(--dark-selection);
-    color: var(--dark-text);
-}
-
-kbd {
-    background-color: var(--dark-bg-alt);
-    color: var(--dark-text);
-    border-color: var(--dark-border);
-}
-
-code {
-    background-color: var(--dark-bg-alt);
-    color: var(--dark-text);
-}
-
-::selection {
-    background-color: var(--dark-selection);
-    color: var(--dark-text);
-}
-
-::-moz-selection {
-    background-color: var(--dark-selection);
-    color: var(--dark-text);
-}
-
-::placeholder {
-    color: var(--dark-text-secondary);
-    opacity: 0.5;
-}
-</style>
+<link rel="icon" href="img/favicon.ico" sizes="any">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/theme.css">
+<script src="js/title-ticker.js" defer></script>
 </head>
 <body>
-    <script language="JavaScript"> 
-var space = " ";
-var speed = 60;
-var pos = 0;
-
-var messages = [
-    "QUACK!! oops, i mean: meow! w-well, actually :nerd: it would be MEACK since my pfp is a cat but my name is PatoFlamejanteTV, so its.. both?!",
-    "UltimateQuack, now on the Internet!!",
-    "hi hi hi hi hi hi hi hi hi hi hi hi hi hi hih ih ih ihi hih ih ... ... ... does anyone really read this?",
-    "QUACK QUACK QUACK!!",
-    "asdfghjkl",
-    "meow :3",
-    "Certified Duck Moment™",
-    "fun fact: this website is open-source!"
-];
-
-// Shuffle messages
-function shuffle(array)
-{
-    for (var i = array.length - 1; i > 0; i--)
-    {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
-}
-
-var queue = messages.slice();
-shuffle(queue);
-
-var msg = queue.shift();
-
-function Scroll()
-{
-    document.title = msg.substring(pos, msg.length) + space + msg.substring(0, pos);
-
-    pos++;
-
-    if (pos > msg.length)
-    {
-        pos = 0;
-
-        // Get the next message
-        if (queue.length === 0)
-        {
-            // All messages were shown — create a new random order
-            queue = messages.slice();
-            shuffle(queue);
-        }
-
-        msg = queue.shift();
-    }
-
-    window.setTimeout(Scroll, speed);
-}
-
-Scroll();
-</script>
-<table role="presentation" width="1248">
+    <table role="presentation" width="1248">
 <tbody><tr><td width="1240" height="694" valign="top">
 <header>
 <table role="presentation" width="100%">
@@ -214,7 +77,7 @@ Scroll();
 <fieldset>
 <legend><strong role="heading" aria-level="2">▌ ...lol</strong></legend>
 
-<img src="https://github.com/havaianasdestruido/havaianasdestruido.github.io/blob/new/lol.gif?raw=true">
+<img src="img/lol.gif" alt="lol" width="310" height="38" loading="lazy">
 </fieldset>
 </td>
 

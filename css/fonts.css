@@ -1,0 +1,17 @@
+/* ==========================================================================
+   fonts.css — webfont declaration and global font stack
+   Font: "Lucida BSOD" by c3y99 (see ../fonts/README.txt)
+   ========================================================================== */
+
+@font-face {
+    font-family: "Lucida BSOD";
+    src: url("../fonts/lucida-bsod.otf.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    font-family: "Lucida BSOD", Tahoma, sans-serif !important;
+    /*zoom: 1.5;*/
+}

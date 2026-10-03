@@ -1,0 +1,86 @@
+/* ==========================================================================
+   theme.css — dark colour scheme for the native HTML elements used on the page
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Palette
+   -------------------------------------------------------------------------- */
+
+:root {
+    --dark-bg: #231f18;
+    --dark-bg-alt: #2b261e;
+    --dark-bg-light: #373126;
+
+    --dark-text: #ffffd8;
+    --dark-text-secondary: #e8cfa1;
+
+    --dark-link: #b4a07d;
+
+    --dark-border: #928265;
+    --dark-border-light: #796c54;
+
+    --dark-selection: #5b513f;
+}
+
+/* --------------------------------------------------------------------------
+   Document
+   -------------------------------------------------------------------------- */
+
+html {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+    color-scheme: dark;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+/* --------------------------------------------------------------------------
+   Elements
+   -------------------------------------------------------------------------- */
+
+a {
+    color: var(--dark-link);
+}
+
+table,
+fieldset {
+    border-color: var(--dark-border);
+}
+
+mark {
+    background-color: var(--dark-selection);
+    color: var(--dark-text);
+}
+
+kbd {
+    background-color: var(--dark-bg-alt);
+    color: var(--dark-text);
+    border-color: var(--dark-border);
+}
+
+code {
+    background-color: var(--dark-bg-alt);
+    color: var(--dark-text);
+}
+
+/* --------------------------------------------------------------------------
+   Selection and placeholders
+   -------------------------------------------------------------------------- */
+
+::selection {
+    background-color: var(--dark-selection);
+    color: var(--dark-text);
+}
+
+::-moz-selection {
+    background-color: var(--dark-selection);
+    color: var(--dark-text);
+}
+
+::placeholder {
+    color: var(--dark-text-secondary);
+    opacity: 0.5;
+}
