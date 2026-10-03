@@ -1,12 +1,1 @@
-
-## Star History
-
-<a href="https://www.star-history.com/?repos=havaianasdestruido%2Fhavaianasdestruido.github.io&type=date&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=havaianasdestruido/havaianasdestruido.github.io&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=havaianasdestruido/havaianasdestruido.github.io&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=havaianasdestruido/havaianasdestruido.github.io&type=date&legend=top-left" />
- </picture>
-</a>
-
-test
+The FontStruction “fs Tahoma 8px” (https://fontstruct.com/fontstructions/show/735108) by “ETHproductions” is licensed under a Creative Commons Attribution Share Alike license (http://creativecommons.org/licenses/by-sa/3.0/).
