@@ -23,7 +23,7 @@ native HTML with a small dark theme on top. Published with GitHub Pages.
 │   └── README.txt              # font credits (c3y99, via FontStruct)
 ├── .github/workflows/static.yml
 ├── google57105d25a810a2c8.html # Google Search Console verification (must stay at root)
-└── 2KO4FQDU5SNZ3R3WXX4FHT3PZNQ6MBYD.gif  # verification token (must stay at root)
+└── 2KO4FQDU5SNZ3R3WXX4FHT3PZNQ6MBYD.gif  # gif
 ```
 
 All assets are referenced with **relative paths** (`img/lol.gif`, `css/theme.css`, …), so the
