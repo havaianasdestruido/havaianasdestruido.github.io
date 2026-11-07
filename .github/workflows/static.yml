@@ -1,6 +1,6 @@
 
 # Deploy static content to GitHub Pages with dynamic GitHub stats
-name: Deploy static content to Pages
+name: Deploy static content to Github Pages
 
 on:
   push:
