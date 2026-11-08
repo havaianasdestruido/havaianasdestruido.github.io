@@ -45,6 +45,21 @@ code {
     color: #ffffd8;
 }
 
+/* Interactive controls keep a 24x24 CSS px hit area (WCAG 2.5.8 target size). */
+a,
+button {
+    box-sizing: border-box;
+    display: inline-block;
+    min-height: 24px;
+    min-width: 24px;
+}
+
+/* The GIFs are pixel art: scale them crisply on high-DPI screens
+   instead of blur-resampling them. */
+img {
+    image-rendering: pixelated;
+}
+
 /* The small ES5 dialog fallback uses only CSS understood by IE11. */
 .legacy-popover {
     background-color: #2b261e;
